@@ -1,0 +1,77 @@
+#!/bin/bash
+
+echo -e "Configuring Watchix build environment...\n"
+
+# Accept optional parameters
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --cc)
+            CC="$2"
+            shift 2
+            ;;
+        --cflags)
+            CFLAGS="$2"
+            shift 2
+            ;;
+        --objdir)
+            OBJ_DIR="$2"
+            shift 2
+            ;;
+        --installdir)
+            INSTALL_DIR="$2"
+            shift 2
+            ;;
+        *)
+            echo "Unknown option $1"
+            exit 1
+            ;;
+    esac
+done
+
+INCLUDE_DIR=$(pwd)/include
+
+# Defaults and central paths
+CC=${CC:-gcc}
+CXX=${CXX:-g++}
+CFLAGS=${CFLAGS:--Wall -Wextra -I$INCLUDE_DIR -I$(pwd)}
+CXXFLAGS=${CXXFLAGS:--Wall -Wextra -I$INCLUDE_DIR -I$(pwd)}
+OBJ_DIR=$(realpath "${OBJ_DIR:-obj}")
+INSTALL_DIR=$(realpath "${INSTALL_DIR:-output}")
+
+
+# Check compiler availability
+if ! command -v $CC &> /dev/null; then
+    echo "Error: Compiler $CC not found."
+    exit 1
+fi
+
+echo -e "\n========== Watchix Build Configuration =========="
+echo "Compiler:      $CC"
+echo "CFLAGS:        $CFLAGS"
+echo "Object Dir:    $OBJ_DIR"
+echo "Install Dir:   $INSTALL_DIR"
+echo "=================================================\n"
+
+# Create build directories
+mkdir -p "$OBJ_DIR"
+mkdir -p "$INSTALL_DIR"
+
+# Generate config.mk with final resolved paths (no recalculation)
+cat <<EOF > config.mk
+CC = $CC
+CXX = $CXX
+CFLAGS = $CFLAGS
+CXXFLAGS = $CXXFLAGS
+OBJ_DIR = $OBJ_DIR
+INSTALL_DIR = $INSTALL_DIR
+EOF
+
+# Dynamically generate Makefiles
+echo "Generating Makefiles..."
+
+find . -name 'Makefile.in' | while read -r makefile_in; do
+    makefile="${makefile_in%.in}"
+    sed "s|@OBJ_DIR@|$OBJ_DIR|g; s|@INSTALL_DIR@|$INSTALL_DIR|g" "$makefile_in" > "$makefile"
+done
+
+echo "Configuration completed successfully."
