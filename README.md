@@ -1,3 +1,7 @@
+![Build Status](https://github.com/trustuno/watchix/actions/workflows/build.yml/badge.svg)
+
+
+---
 # WatchiX - Trust Uno Vault WatchiX
 
 WatchiX is a powerful, scalable, and cross-platform **certificate lifecycle monitoring and management agent**.  
