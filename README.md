@@ -1,5 +1,8 @@
 ![Build Status](https://github.com/trustuno/watchix/actions/workflows/build.yml/badge.svg)
 
+![Current Version](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/trustuno/watchix/main/version.json)
+
+
 
 ---
 # WatchiX - Trust Uno Vault WatchiX

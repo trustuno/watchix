@@ -2,6 +2,12 @@
 #include "event_manager/event_id.h"
 #include <iostream>
 
+#include "version.h"
+
+void print_version() {
+    printf("WatchiX Agent Version: %d.%d.%d(%s)\n", WATCHIX_MAJOR, WATCHIX_MINOR, WATCHIX_HOTFIX, WATCHIX_BUILD_ID);
+}
+
 /**
  * @brief Simple test function to print received event payload.
  * @param payload The received event data.
@@ -14,6 +20,9 @@ void TestCallback(const std::string& payload) {
  * @brief Main function to test EventManager.
  */
 int main() {
+
+    print_version();
+
     EventManager em;
 
     em.Start();

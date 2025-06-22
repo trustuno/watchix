@@ -31,4 +31,15 @@ jobs:
       - name: Build
         run: |
           ./build_watchix.sh
+
+      - name: Generate version badge
+        run: |
+          VERSION=$(cat VERSION)
+          echo "{\"schemaVersion\":1,\"label\":\"version\",\"message\":\"$VERSION\",\"color\":\"blue\"}" > version.json
+
+      - name: Upload version badge
+        uses: actions/upload-artifact@v3
+        with:
+          name: version-badge
+          path: version.json
       

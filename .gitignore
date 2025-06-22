@@ -50,3 +50,13 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Ignore build directory
+obj/
+output/
+
+# Ignore logs directory at any level
+# **/obj/
+
+# Ignore temporary files
+# tmp/

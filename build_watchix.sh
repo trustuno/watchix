@@ -2,6 +2,9 @@
 
 set -e  # Exit on any error
 
+echo "Generating version files..."
+./scripts/generate_version.sh --release
+
 # ===== Configure =====
 echo "Running configuration..."
 ./configure
@@ -9,7 +12,7 @@ echo "Running configuration..."
 # ===== Build =====
 echo "Building Watchix..."
 make clean
-make -j$(nproc)
+make 
 
 # ===== Post-Build =====
 echo "Build completed successfully."
