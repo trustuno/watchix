@@ -56,26 +56,18 @@ WatchiX is designed with security-first principles:
 We welcome contributions from developers, testers, and security experts.
 
 Contribution Steps:
-Fork this repository.
-
-Create a new branch: git checkout -b feature/your-feature-name
-
-Make your changes.
-
-Submit a pull request (PR) with detailed description.
+- Fork this repository.
+- Create a new branch: git checkout -b feature/your-feature-name
+- Make your changes.
+- Submit a pull request (PR) with detailed description.
 
 Areas You Can Contribute:
-New notification plugins (e.g., WhatsApp, MS Teams).
-
-Cloud dashboard UI.
-
-Security hardening.
-
-Testing frameworks.
-
-Documentation improvements.
+- New notification plugins (e.g., WhatsApp, MS Teams).
+- Cloud dashboard UI.
+- Security hardening.
+- Testing frameworks.
+- Documentation improvements.
 
 Note:
 Ensure your code is well-documented.
-
 Follow the existing directory and build structure.
