@@ -16,7 +16,7 @@ else
     git restore "$VERSION_HEADER_FILE"
 fi
 
-# Check if VERSION_FILE has changes
+# Check if VERSION File has changes
 if git diff --quiet "$VERSION_FILE" && git diff --cached --quiet "$VERSION_FILE"; then
     echo "$VERSION_FILE is clean."
 else
