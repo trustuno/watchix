@@ -27,7 +27,7 @@ jobs:
       
       - name: Make build script executable
         run: chmod +x ./build_watchix.sh
-             chmod +x ./scripts\generate_version.sh
+             chmod +x ./scripts/generate_version.sh
       
       - name: Build
         run: |
