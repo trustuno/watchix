@@ -1,8 +1,12 @@
 ![Build Status](https://github.com/trustuno/watchix/actions/workflows/build.yml/badge.svg)
 
 
+<h1 align="center">WatchiX Agent</h1>
+<p align="center">
+🛡️ Lightweight observability for embedded systems • 🌐 Open Source
+</p>
+
 ---
-# WatchiX - Trust Uno Vault WatchiX
 
 WatchiX is a powerful, scalable, and cross-platform **certificate lifecycle monitoring and management agent**.  
 It provides a comprehensive solution for **certificate expiry monitoring**, **notifications**,  **renew**, **secure agent-cloud communication**, and **optional on-premises management**.
