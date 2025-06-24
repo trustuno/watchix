@@ -27,7 +27,7 @@ WatchiX simplifies this with an agent-based solution that can:
 
 ## 🔍 Key Features
 
-### Near-Term Features (v1.x)
+### Near-Term Features (v1.x) ![Before: Jan 2026](https://img.shields.io/badge/Before-Jan_2026-dark_green)
 - ✅ Certificate expiry monitoring.
 - ✅ Daily checks and real-time status reporting.
 - ✅ Chain of trust verification.
@@ -36,14 +36,15 @@ WatchiX simplifies this with an agent-based solution that can:
 - ✅ On-premises deployment option (no cloud dependency).
 - ✅ Docker-compatible build and deployment.
 
-### Mid-Term Features (v2.x)
+### Mid-Term Features (v2.x)  ![Before: Jun 2026](https://img.shields.io/badge/Before-Jun_2026-dark_green)
 - 🔄 Cloud-based dashboard for multi-agent management.
 - 🔄 IPsec-based secure communication option.
-- 🔄 Certificate auto-renewal via integrated CA APIs (DigiCert, GlobalSign, Let's Encrypt, etc.).
+- 🔄 Certificate auto-renewal via integrated CA APIs
 - 🔄 Revocation handling from the cloud.
 - 🔄 Role-based access control (RBAC) for agents and cloud UI.
+- 🔐 API Integration of : ![Planned: DigiCert](https://img.shields.io/badge/DigiCert-planned-blue)  ![Planned: GlobalSign](https://img.shields.io/badge/GlobalSign-planned-blue) ![Planned: Let's Encrypt](https://img.shields.io/badge/LetsEncrypt-planned-blue) ![Planned: Sectigo](https://img.shields.io/badge/Sectigo-planned-blue)
 
-### Long-Term Vision (v3.x)
+### Long-Term Vision (v3.x) ![Before: Dec 2026](https://img.shields.io/badge/Before-Dec_2026-dark_green)
 - 🌐 On-premises edge server for full private deployments.
 - 🌐 Embedded CMP (Certificate Management Protocol) server integration.
 - 🌐 SLA-backed premium support.
